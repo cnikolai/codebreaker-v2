@@ -10,7 +10,8 @@
   <string name="action_settings">Settings</string>
 
   <string name="menu_play">Play</string>
-  <string name="menu_scores">Top scores</string>
+  <string name="menu_scores">My Scores</string>
+  <string name="menu_ranks">Player Ranks</string>
   <string name="menu_settings">Settings</string>
 
   <string name="submit">Submit</string>
@@ -31,6 +32,7 @@
   <string name="pool_size_label">Pool size</string>
 
   <string name="created_header">Completed</string>
+  <string name="display_name_header">Name</string>
 
   <string name="guesses_header_unselected">Guesses</string>
   <string name="time_header_unselected">Time</string>
@@ -42,22 +44,22 @@
   <string name="elapsed_time_format">%1$d:%2$04.1f</string>
 
   <string-array name="emojis">
-    <item>&#x1f600;</item> <!-- grinning face -->
-    <item>&#x1f922;</item> <!-- nauseated face -->
-    <item>&#x1f608;</item> <!-- smiling face with horns -->
-    <item>&#x1f47D;</item> <!-- alien -->
-    <item>&#x1f63c;</item> <!-- cat with wry smile -->
-    <item>&#x1f418;</item> <!-- raccoon face -->
-    <item>&#x1f984;</item> <!-- unicorn -->
-    <item>&#x1f422;</item> <!-- turtle -->
     <item>&#x2615;</item> <!-- hot beverage -->
+    <item>&#x1f32e;</item> <!-- taco -->
+    <item>&#x1f339;</item> <!-- rose -->
     <item>&#x1f37a;</item> <!-- beer mug -->
     <item>&#x1f37f;</item> <!-- popcorn -->
-    <item>&#x1F32E;</item> <!-- taco -->
-    <item>&#x1f5DD;</item> <!-- key -->
-    <item>&#x1f339;</item> <!-- rose -->
-    <item>&#x1F4B0;</item> <!-- money bag -->
-    <item>&#x1F682;</item> <!-- bicycle -->
+    <item>&#x1f418;</item> <!-- elephant -->
+    <item>&#x1f422;</item> <!-- turtle -->
+    <item>&#x1f47d;</item> <!-- alien -->
+    <item>&#x1f4b0;</item> <!-- money bag -->
+    <item>&#x1f5dd;</item> <!-- key -->
+    <item>&#x1f600;</item> <!-- grinning face -->
+    <item>&#x1f608;</item> <!-- smiling face with horns -->
+    <item>&#x1f63c;</item> <!-- cat with wry smile -->
+    <item>&#x1f682;</item> <!-- bicycle -->
+    <item>&#x1f922;</item> <!-- nauseated face -->
+    <item>&#x1f984;</item> <!-- unicorn -->
   </string-array>
 
 </resources>
