@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.codebreaker.controller;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.codebreaker.R;
-import edu.cnm.deepdive.codebreaker.adapter.GameSummaryAdapter;
+import edu.cnm.deepdive.codebreaker.adapter.RankedUserAdapter;
 import edu.cnm.deepdive.codebreaker.databinding.FragmentRanksBinding;
 import edu.cnm.deepdive.codebreaker.viewmodel.ScoresViewModel;
 
@@ -22,6 +23,12 @@ public class RanksFragment extends Fragment {
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
     binding = FragmentRanksBinding.inflate(inflater, container, false);
+    //this gets changed by listener to livedata, but we're putting something in there so that it hanldes default values
+    Resources resources = getResources();
+    binding.codeLengthDisplay.setText(
+        String.valueOf(resources.getInteger(R.integer.code_length_pref_default)));
+    binding.poolSizeDisplay.setText(
+        String.valueOf(resources.getInteger(R.integer.pool_size_pref_default)));
     binding.codeLength.setOnSeekBarChangeListener(
         (SimpleChangeListener) this::handleCodeLengthChange);
     binding.poolSize.setOnSeekBarChangeListener((SimpleChangeListener) this::handlePoolSizeChange);
@@ -37,9 +44,8 @@ public class RanksFragment extends Fragment {
     viewModel
         .getRankings()
         .observe(getViewLifecycleOwner(), (ranks) -> {
-          //TODO RanksAdapter
-//          GameSummaryAdapter adapter = new GameSummaryAdapter(getContext(), ranks);
-//          binding.ranks.setAdapter(adapter);
+          RankedUserAdapter adapter = new RankedUserAdapter(getContext(), ranks);
+          binding.ranks.setAdapter(adapter);
         });
     viewModel
         .getCodeLength()

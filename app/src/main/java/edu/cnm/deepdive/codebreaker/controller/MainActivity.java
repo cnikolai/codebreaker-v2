@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawer = binding.drawerLayout;
     NavigationView navigationView = binding.navView;
     // Passing each menu ID as a set of Ids because each
-    // menu should be considered as top level destinations.
-    appBarConfiguration = new Builder(R.id.nav_play, R.id.nav_scores)
+    // menu should be considered as top level destinations. Shows hamburger menu instead of back button
+    appBarConfiguration = new Builder(R.id.nav_play, R.id.nav_scores, R.id.nav_ranks)
         .setOpenableLayout(drawer)
         .build();
     navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
